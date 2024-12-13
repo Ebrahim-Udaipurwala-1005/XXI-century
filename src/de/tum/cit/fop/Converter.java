@@ -17,7 +17,21 @@ public class Converter {
 
     public static int convertToInt(String roman){
         // TODO : write your solution here
-        return 0;
+        int total = 0;
+        int i = 0;
+
+        while (i < roman.length()){
+            if (i + 1 < roman.length() && romans.contains(roman.substring(i, i + 2))){
+                total += decimalNumbers.get(romans.indexOf(roman.substring(i, i + 2)));
+                i += 2;
+            }
+            else {
+                total += decimalNumbers.get(romans.indexOf(roman.substring(i, i + 1)));
+                i += 1;
+            }
+        }
+
+        return total;
     }
 
     public static String convertToRoman(int number){
