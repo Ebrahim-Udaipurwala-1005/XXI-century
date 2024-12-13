@@ -36,6 +36,14 @@ public class Converter {
 
     public static String convertToRoman(int number){
         // TODO : write your solution here
-        return "";
+        StringBuilder roman = new StringBuilder();
+
+        for (int i = decimalNumbers.size() - 1; i >= 0; i--){
+            while (number >= decimalNumbers.get(i)){
+                number -= decimalNumbers.get(i);
+                roman.append(romans.get(i));
+            }
+        }
+        return roman.toString();
     }
 }
