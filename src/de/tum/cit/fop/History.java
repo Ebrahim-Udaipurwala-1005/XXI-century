@@ -13,6 +13,8 @@ public class History {
 
     public void sortRecords(){
         // TODO : write your solution here
+        historyRecords.sort((record1, record2) ->
+                Integer.compare(Converter.convertToInt(record1), Converter.convertToInt(record2)));
     }
 
     public void printRecords(){
