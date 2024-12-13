@@ -19,6 +19,10 @@ public class History {
 
     public void printRecords(){
         // TODO : write your solution here
+        for (String record : historyRecords) {
+            int decimalValue = Converter.convertToInt(record);
+            System.out.println(record + " - " + decimalValue);
+        }
     }
 
     public List<String> getHistoryRecords() {
